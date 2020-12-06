@@ -3,6 +3,10 @@ import 'buttom.dart';
 import 'buttom_row.dart';
 
 class Keyboard extends StatelessWidget {
+  final void Function(String) cb;
+
+  Keyboard(this.cb);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,32 +14,32 @@ class Keyboard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonRow([
-            Buttom.big(text: 'AC'),
-            Buttom(text: '%'),
-            Buttom.operation(text: '/'),
+            Buttom.big(text: 'AC', color: Buttom.DARK, cb: cb),
+            Buttom(text: '%', color: Buttom.DARK, cb: cb),
+            Buttom.operation(text: '/', cb: cb),
           ]),
           ButtonRow([
-            Buttom(text: '7'),
-            Buttom(text: '8'),
-            Buttom(text: '9'),
-            Buttom.operation(text: '*'),
+            Buttom(text: '7', cb: cb),
+            Buttom(text: '8', cb: cb),
+            Buttom(text: '9', cb: cb),
+            Buttom.operation(text: '*', cb: cb),
           ]),
           ButtonRow([
-            Buttom(text: '4'),
-            Buttom(text: '5'),
-            Buttom(text: '6'),
-            Buttom.operation(text: '-'),
+            Buttom(text: '4', cb: cb),
+            Buttom(text: '5', cb: cb),
+            Buttom(text: '6', cb: cb),
+            Buttom.operation(text: '-', cb: cb),
           ]),
           ButtonRow([
-            Buttom(text: '1'),
-            Buttom(text: '2'),
-            Buttom(text: '3'),
-            Buttom.operation(text: '+'),
+            Buttom(text: '1', cb: cb),
+            Buttom(text: '2', cb: cb),
+            Buttom(text: '3', cb: cb),
+            Buttom.operation(text: '+', cb: cb),
           ]),
           ButtonRow([
-            Buttom.big(text: '0'),
-            Buttom(text: ','),
-            Buttom.operation(text: '='),
+            Buttom.big(text: '0', cb: cb),
+            Buttom(text: ',', cb: cb),
+            Buttom.operation(text: '=', cb: cb),
           ]),
         ],
       ),
