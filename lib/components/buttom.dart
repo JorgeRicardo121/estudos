@@ -11,7 +11,7 @@ class Buttom extends StatelessWidget {
   Buttom({@required this.text, this.big = false, this.color = DEFAULT});
   Buttom.operation(
       {@required this.text, this.big = false, this.color = OPERATION});
-  Buttom.dark({@required this.text, this.big = false, this.color = OPERATION});
+  Buttom.dark({@required this.text, this.big = false, this.color = DARK});
   Buttom.big({@required this.text, this.big = true, this.color = DEFAULT});
 
   @override

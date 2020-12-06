@@ -12,7 +12,6 @@ class Keyboard extends StatelessWidget {
           ButtonRow([
             Buttom.big(text: 'AC'),
             Buttom(text: '%'),
-            Buttom(text: '%'),
             Buttom.operation(text: '/'),
           ]),
           ButtonRow([
