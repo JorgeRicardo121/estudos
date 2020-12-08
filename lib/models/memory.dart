@@ -21,7 +21,9 @@ class Memory {
   }
 
   _addDigit(String digit) {
-    final currentValue = _wipeValue ? '' : _value;
+    final wipeValue = _value == '0' || _wipeValue;
+
+    final currentValue = wipeValue ? '' : _value;
 
     _value = currentValue + digit;
     _wipeValue = false;
